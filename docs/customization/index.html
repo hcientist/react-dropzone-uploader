@@ -105,15 +105,15 @@
 <p>If you use the component injection API, you'll probably want to copy the default component and modify it.</p>
 <p>You'll also need to know which props are passed to your injected components. Scroll to the bottom of the following files to see their prop types. Or, <a href="https://react-dropzone-uploader.js.org/docs/typescript">if you're using TypeScript</a>, add a type definition to the props received by your custom component and inspect away.</p>
 <ul>
-<li><a href="https://github.com/fortana-co/react-dropzone-uploader/blob/master/src/Input.js">InputComponent</a></li>
-<li><a href="https://github.com/fortana-co/react-dropzone-uploader/blob/master/src/Preview.js">PreviewComponent</a></li>
-<li><a href="https://github.com/fortana-co/react-dropzone-uploader/blob/master/src/SubmitButton.js">SubmitButtonComponent</a></li>
-<li><a href="https://github.com/fortana-co/react-dropzone-uploader/blob/master/src/Layout.js">LayoutComponent</a></li>
+<li><a href="https://github.com/fortana-co/react-dropzone-uploader/blob/master/src/Input.tsx">InputComponent</a></li>
+<li><a href="https://github.com/fortana-co/react-dropzone-uploader/blob/master/src/Preview.tsx">PreviewComponent</a></li>
+<li><a href="https://github.com/fortana-co/react-dropzone-uploader/blob/master/src/SubmitButton.tsx">SubmitButtonComponent</a></li>
+<li><a href="https://github.com/fortana-co/react-dropzone-uploader/blob/master/src/Layout.tsx">LayoutComponent</a></li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="custom-layout"></a><a href="#custom-layout" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Custom Layout</h3>
 <p>By default, RDU's layout component renders previews, file input and submit button as children of a dropzone div that responds to drag and drop events.</p>
 <p>If you want to change this layout, e.g. to render the previews and submit button outside of your dropzone, you'll need to pass your own <code>LayoutComponent</code>.</p>
-<p>If this sounds daunting you probably haven't looked at <a href="https://github.com/fortana-co/react-dropzone-uploader/blob/master/src/Layout.js">Layout</a> yet. Layout gets pre-rendered <code>input</code>, <code>previews</code>, and <code>submitButton</code> props, which makes changing RDU's layout trivial.</p>
+<p>If this sounds daunting you probably haven't looked at <a href="https://github.com/fortana-co/react-dropzone-uploader/blob/master/src/Layout.tsx">Layout</a> yet. Layout gets pre-rendered <code>input</code>, <code>previews</code>, and <code>submitButton</code> props, which makes changing RDU's layout trivial.</p>
 <h3><a class="anchor" aria-hidden="true" id="pass-additional-props-to-injected-components"></a><a href="#pass-additional-props-to-injected-components" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pass Additional Props To Injected Components</h3>
 <p>Component injection props can be <a href="https://reactjs.org/docs/components-and-props.html#function-and-class-components">function or class components</a>.</p>
 <p>A function component is literally a function that accepts a props argument and returns a React element. So, if you want to pass additional props to your injected component, just do something like this:</p>
